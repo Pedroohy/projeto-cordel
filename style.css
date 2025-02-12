@@ -4,45 +4,107 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
+:root {
+    --font1: "Verdana", Geneva, Tahoma, sans-serif;
+    --font2: "Passion One", serif;
+    --font3: "Sriracha", serif;
+}
+
 * {
     padding: 0px;
     margin: 0px;
 }
 
+html,body {
+    min-height: 100vh;
+    background-color: #464545;
+}
 header {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
 }
 
-header > p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+header h1 {
+    padding-top: 50px;
+    font-size: 10vw;
+    font-variant: small-caps;
+    font-family: var(--font2);
+    font-weight: 700;
+   
+}
 
+header p {
+    padding-bottom: 50px;
+    font-family: var(--font1);
+    font-size: 16px;
+}
+
+header a, footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    font-family: var(--font3);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-size: 3.5vw;
 }
 
 section.normal {
-    padding: 74px 0px 74px 30px;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-section.imagem {
+section.normal p {
+    padding-bottom: 2em;
+}
+
+#img001 {
+    padding: 74px 0px 74px 30px;
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(imagens/background001.jpg);
+    background-color: #242424;
+    color: #ffffff;
+}
+ 
+#img002 {
+    padding: 74px 0px 74px 30px;
     background-position: absolute;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #ffffff;
-}
-p {
-    font-family: "Sriracha", serif;
-    font-size: 26px;
-    font-weight: 53px;
-    line-height: 53.928px;
+    background-image: url(imagens/background002.jpg);
+    background-color: #242424;
+    color: #ffffff;
 }
 
-h1 {
-    font-family: "Passion One", serif;
-    font-weight: bold;
-    font-size: 77px;
+section.imagem {
+    box-shadow: inset 6px 6px 13px 0px #00000078;
+}
+
+section.imagem p {
+    display: inline-block;
+    background-color: #0000009d;
+    text-shadow: 1px 1px 0px #000000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    font-family: var(--font1);
+    text-align: center;
 }
 
